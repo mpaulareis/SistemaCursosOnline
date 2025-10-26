@@ -13,6 +13,11 @@ public class Matricula {
         this.dataMatricula = dataMatricula;
     }
 
+    public Aluno  getAluno() { return aluno; }
+    public Curso getCurso() { return curso; }
+    public String getDataMatricula() { return dataMatricula; }
+    public double getNota() { return nota; }
+
     public void registrarNota(double nota) {
         this.nota = nota;
     }

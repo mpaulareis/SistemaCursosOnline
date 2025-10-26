@@ -1,6 +1,5 @@
 package cursos;
 
-
 public class Aluno {
     private String nome;
     private String cpf;
@@ -16,6 +15,8 @@ public class Aluno {
 
     public String getNome() { return nome; }
     public String getCpf() { return cpf; }
+    public String getEmail() { return email; }
+    public String getTelefone() { return telefone; }
 
     @Override
     public String toString() {

@@ -12,6 +12,10 @@ public class Aula {
         this.data = data;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
     @Override
     public String toString() {
         return "Aula: " + titulo + " | Data: " + data;

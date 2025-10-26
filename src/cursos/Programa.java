@@ -1,26 +1,25 @@
 package cursos;
 
-
 public class Programa {
     public static void main(String[] args) {
+        Fachada fachada = Fachada.getInstancia();
 
-        Professor prof1 = new Professor("Maria Silva", "Programação", "maria@cursos.com");
+        Professor prof = new Professor("Paulo Anselmo", "Programação", "paulo@ex.com");
+        fachada.cadastrarProfessor(prof);
+        System.out.println("Professor cadastrado: " + prof);
 
-        Curso cursoJava = new Curso("Java Básico", "Introdução ao Java", 40, "Tecnologia", prof1);
+        Curso curso = new Curso("Java Básico", "Introdução ao Java", 40, "Tecnologia", prof);
+        fachada.cadastrarCurso(curso);
+        System.out.println("Curso cadastrado: " + curso);
 
-        Aula aula1 = new Aula("Introdução", "História do Java", "01/09/2025");
-        Aula aula2 = new Aula("Sintaxe", "Variáveis e Operadores", "02/09/2025");
-        cursoJava.adicionarAula(aula1);
-        cursoJava.adicionarAula(aula2);
+        Aluno aluno = new Aluno("Maria Paula Reis", "12345678900", "paula@ex.com", "99999-9999");
+        fachada.cadastrarAluno(aluno);
+        System.out.println("Aluno cadastrado: " + aluno);
 
-        Aluno aluno1 = new Aluno("João Souza", "12345678900", "joao@email.com", "99999-9999");
-
-        Matricula mat1 = new Matricula(aluno1, cursoJava, "01/09/2025");
-        mat1.registrarNota(9.0);
-
-        System.out.println(prof1);
-        System.out.println(cursoJava);
-        System.out.println(aluno1);
-        System.out.println(mat1);
+        fachada.matricularAluno("12345678900", "Java Básico", "18/09/2025");
+        System.out.println("Matrículas do aluno:");
+        Matricula[] mats = fachada.listarMatriculasDoAluno("12345678900");
+        for (Matricula m : mats) System.out.println(m);
     }
 }
+

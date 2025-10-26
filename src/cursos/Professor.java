@@ -13,6 +13,7 @@ public class Professor {
     }
 
     public String getNome() { return nome; }
+    public String getAreaAtuacao() { return areaAtuacao; }
 
     @Override
     public String toString() {
