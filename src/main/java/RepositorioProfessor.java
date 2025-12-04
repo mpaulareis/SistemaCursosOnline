@@ -37,7 +37,7 @@ public class RepositorioProfessor {
                 return p;
             }
         }
-        return null; // Retorna null se não encontrar
+        return null;
     }
 
     public Professor buscarPorCpf(String cpf) {

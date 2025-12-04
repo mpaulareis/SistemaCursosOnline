@@ -16,7 +16,7 @@ public class RepositorioMatricula {
         return instancia;
     }
 
-    // cadastrar: verifica se já existe matrícula do mesmo aluno no mesmo curso
+
     public void cadastrar(Matricula m) {
         if (m == null) throw new IllegalArgumentException("Matrícula nula");
         if (existeMatricula(m.getAluno().getCpf(), m.getCurso().getTitulo())) throw new EntidadeJaExisteException("Aluno já matriculado neste curso");
@@ -35,7 +35,6 @@ public class RepositorioMatricula {
     }
 
     public Matricula[] listarPorAluno(String cpfAluno) {
-        // conta quantos, cria array e retorna
         int count = 0;
         for (int i = 0; i < indice; i++) if (matriculas[i].getAluno().getCpf().equals(cpfAluno)) count++;
         Matricula[] res = new Matricula[count];
