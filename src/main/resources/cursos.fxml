@@ -6,7 +6,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="application.controllers.CursosController">
+            fx:controller="CursosController">
 
     <top>
         <Label text="Gerenciar Cursos" style="-fx-font-size: 22px;" BorderPane.alignment="CENTER">

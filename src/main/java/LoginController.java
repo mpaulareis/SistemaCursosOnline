@@ -1,9 +1,10 @@
-
-
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.jetbrains.annotations.NotNull;
+import javafx.event.ActionEvent;
 
 public class LoginController {
 
@@ -11,7 +12,7 @@ public class LoginController {
     @FXML private PasswordField campoSenha;
 
     @FXML
-    public void fazerLogin() {
+    public void fazerLogin(@NotNull ActionEvent event) {
         try {
             String cpf = campoCpf.getText();
             String senha = campoSenha.getText();

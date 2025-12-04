@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="application.controllers.DashboardController">
+            fx:controller="DashboardController">
 
     <top>
         <HBox spacing="20" alignment="CENTER_LEFT">

@@ -5,7 +5,7 @@
 <?import javafx.geometry.Insets?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="application.controllers.MatriculasController">
+            fx:controller="MatriculasController">
 
     <top>
         <Label text="Gerenciar Matrículas" style="-fx-font-size: 22px;" BorderPane.alignment="CENTER">

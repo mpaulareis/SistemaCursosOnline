@@ -4,8 +4,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="root" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="application.controllers.LoginController">
+<BorderPane fx:id="root"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="LoginController">
+
 
     <center>
         <VBox alignment="CENTER" spacing="15">
@@ -18,7 +20,7 @@
             <TextField fx:id="campoCpf" promptText="CPF"/>
             <PasswordField fx:id="campoSenha" promptText="Senha"/>
 
-            <Button text="Entrar" onAction="#fazerLogin" maxWidth="150"/>
+            <Button text="Entrar" onAction = "#fazerLogin"  maxWidth="150"/>
 
         </VBox>
     </center>

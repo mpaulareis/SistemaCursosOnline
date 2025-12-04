@@ -5,7 +5,7 @@
 <?import javafx.geometry.Insets?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="application.controllers.ProfessoresController">
+            fx:controller="ProfessoresController">
 
     <top>
         <Label text="Gerenciar Professores" style="-fx-font-size: 22px;" BorderPane.alignment="CENTER">
