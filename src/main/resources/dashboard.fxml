@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controllers.DashboardController">
+
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="20" left="20" right="20" bottom="20"/>
+            </padding>
+
+            <Label fx:id="labelUsuario" text="Usuário: " style="-fx-font-size: 18px;"/>
+            <Button text="Sair" onAction="#sair"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" alignment="CENTER">
+            <Button text="Gerenciar Alunos" onAction="#abrirAlunos" prefWidth="200"/>
+            <Button text="Gerenciar Professores" onAction="#abrirProfessores" prefWidth="200"/>
+            <Button text="Gerenciar Cursos" onAction="#abrirCursos" prefWidth="200"/>
+            <Button text="Gerenciar Matrículas" onAction="#abrirMatriculas" prefWidth="200"/>
+        </VBox>
+    </center>
+
+</BorderPane>

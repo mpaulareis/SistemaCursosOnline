@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controllers.ProfessoresController">
+
+    <top>
+        <Label text="Gerenciar Professores" style="-fx-font-size: 22px;" BorderPane.alignment="CENTER">
+            <padding><Insets top="20" bottom="20"/></padding>
+        </Label>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+
+            <TableView fx:id="tabelaProfessores" prefWidth="600" prefHeight="250">
+                <columns>
+                    <TableColumn fx:id="colunaNome" text="Nome" prefWidth="150"/>
+                    <TableColumn fx:id="colunaCpf" text="CPF" prefWidth="150"/>
+                    <TableColumn fx:id="colunaEmail" text="Email" prefWidth="150"/>
+                    <TableColumn fx:id="colunaArea" text="Área" prefWidth="150"/>
+                </columns>
+            </TableView>
+
+            <GridPane hgap="10" vgap="10">
+                <padding><Insets top="20"/></padding>
+
+                <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="campoNome" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="CPF:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="campoCpf" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Email:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="campoEmail" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Área:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="campoArea" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <Button text="Cadastrar Professor" onAction="#cadastrarProfessor" prefWidth="200"/>
+
+        </VBox>
+    </center>
+
+</BorderPane>
+

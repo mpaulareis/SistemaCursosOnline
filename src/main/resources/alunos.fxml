@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controllers.AlunosController">
+
+    <top>
+        <Label text="Gerenciar Alunos"
+               style="-fx-font-size: 22px; -fx-padding: 20;" />
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+
+            <HBox spacing="10">
+                <Label text="Nome:"/>
+                <TextField fx:id="campoNome" prefWidth="250"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="CPF:"/>
+                <TextField fx:id="campoCpf" prefWidth="250"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Email:"/>
+                <TextField fx:id="campoEmail" prefWidth="250"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Telefone:"/>
+                <TextField fx:id="campoTelefone" prefWidth="250"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Senha:"/>
+                <PasswordField fx:id="campoSenha" prefWidth="250"/>
+            </HBox>
+
+            <Button text="Cadastrar Aluno"
+                    prefWidth="200"
+                    onAction="#cadastrarAluno"/>
+
+            <Button text="Atualizar Lista"
+                    prefWidth="200"
+                    onAction="#atualizarTabela"/>
+
+            <TableView fx:id="tabelaAlunos" prefHeight="300" prefWidth="600">
+                <columns>
+                    <TableColumn fx:id="colunaNome" text="Nome" prefWidth="150"/>
+                    <TableColumn fx:id="colunaCpf" text="CPF" prefWidth="120"/>
+                    <TableColumn fx:id="colunaEmail" text="Email" prefWidth="180"/>
+                    <TableColumn fx:id="colunaTelefone" text="Telefone" prefWidth="120"/>
+                </columns>
+            </TableView>
+
+        </VBox>
+    </center>
+
+</BorderPane>

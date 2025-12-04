@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controllers.MatriculasController">
+
+    <top>
+        <Label text="Gerenciar Matrículas" style="-fx-font-size: 22px;" BorderPane.alignment="CENTER">
+            <padding><Insets top="20" bottom="20"/></padding>
+        </Label>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+
+            <TableView fx:id="tabelaMatriculas" prefWidth="600" prefHeight="250">
+                <columns>
+                    <TableColumn fx:id="colunaAluno" text="Aluno" prefWidth="200"/>
+                    <TableColumn fx:id="colunaCurso" text="Curso" prefWidth="200"/>
+                    <TableColumn fx:id="colunaData" text="Data" prefWidth="200"/>
+                </columns>
+            </TableView>
+
+            <GridPane hgap="10" vgap="10">
+                <padding><Insets top="20"/></padding>
+
+                <Label text="CPF do Aluno:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="campoCpfAluno" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Curso:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="campoTituloCurso" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Data:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="campoData" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            </GridPane>
+
+            <Button text="Realizar Matrícula" onAction="#matricular" prefWidth="200"/>
+
+        </VBox>
+    </center>
+
+</BorderPane>
+
